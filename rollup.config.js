@@ -113,9 +113,11 @@ const allBuilds = [
     },
   },
 ];
-
-module.exports = {
+console.log({
   defaultBuild,
-  // this has to be exported as default for rollup CLI to pick it up
   default: allBuilds,
-};
+});
+module.exports = [
+  ...defaultBuild,
+  ...allBuilds,
+];

@@ -1,4 +1,4 @@
-declare module '@risingstack/react-easy-state' {
+declare module '@ali/react-easy-state' {
   import { ComponentType, DependencyList } from 'react';
 
   // takes an object (optionally), wraps it in a transparent proxy and returns the proxy

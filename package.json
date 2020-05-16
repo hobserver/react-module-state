@@ -1,6 +1,6 @@
 {
-  "name": "@risingstack/react-easy-state",
-  "version": "0.0.0-development",
+  "name": "@ali/react-easy-state",
+  "version": "0.0.4",
   "description": "React state management with a minimal API. Made with ES6 Proxies.",
   "main": "dist/cjs.es6.js",
   "module": "dist/es.es6.js",
@@ -25,6 +25,9 @@
     "build-toc": "node ./scripts/buildToc.js",
     "semantic-release": "semantic-release",
     "contributors": "all-contributors generate"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npm.alibaba-inc.com"
   },
   "husky": {
     "hooks": {

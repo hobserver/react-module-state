@@ -6,7 +6,7 @@ import {
   isObservable,
 } from '@nx-js/observer-util';
 
-import { hasHooks } from './utils';
+import { hasHooks, diffProps } from './utils';
 
 export let isInsideFunctionComponent = false;
 export let isInsideClassComponentRender = false;
@@ -108,14 +108,8 @@ export function view(Comp) {
         if (state !== nextState) {
           return true;
         }
-
         // the component should update if any of its props shallowly changed value
-        const keys = Object.keys(props);
-        const nextKeys = Object.keys(nextProps);
-        return (
-          nextKeys.length !== keys.length ||
-          nextKeys.some(key => props[key] !== nextProps[key])
-        );
+        return diffProps(props, nextProps);
       }
 
       // add a custom deriveStoresFromProps lifecyle method
@@ -155,6 +149,8 @@ export function view(Comp) {
   }
 
   return isStatelessComp && hasHooks
-    ? memo(ReactiveComp)
+    ? memo(ReactiveComp, (prevProps, nextProps) => {
+      return !(diffProps(prevProps, nextProps));
+    })
     : ReactiveComp;
 }
