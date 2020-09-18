@@ -1,6 +1,6 @@
 {
   "name": "@ali/react-easy-state",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "React state management with a minimal API. Made with ES6 Proxies.",
   "main": "dist/cjs.es6.js",
   "module": "dist/es.es6.js",
@@ -8,7 +8,7 @@
   "files": [
     "dist",
     "types"
-  ],
+  ],  
   "scripts": {
     "test-native": "NATIVE=true jest --config ./jest.native.json --silent",
     "test-web": "jest --config ./jest.web.json --silent",
@@ -31,9 +31,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm t"
+      
     }
   },
   "author": {

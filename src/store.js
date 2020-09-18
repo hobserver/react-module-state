@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { observable } from '@nx-js/observer-util';
 
-import { batchMethods } from './batch';
+// import { batchMethods } from './batch';
 import {
   isInsideFunctionComponent,
   isInsideClassComponentRender,
@@ -9,9 +9,10 @@ import {
 } from './view';
 
 function createStore(obj) {
-  return batchMethods(
-    observable(typeof obj === 'function' ? obj() : obj),
-  );
+  return observable(typeof obj === 'function' ? obj() : obj);
+  // return batchMethods(
+  //   observable(typeof obj === 'function' ? obj() : obj),
+  // );
 }
 
 export function store(obj) {
