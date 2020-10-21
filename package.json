@@ -1,6 +1,6 @@
 {
-  "name": "@ali/react-easy-state",
-  "version": "0.0.6",
+  "name": "react-module-state",
+  "version": "0.1.0",
   "description": "React state management with a minimal API. Made with ES6 Proxies.",
   "main": "dist/cjs.es6.js",
   "module": "dist/es.es6.js",
@@ -8,7 +8,7 @@
   "files": [
     "dist",
     "types"
-  ],  
+  ],
   "scripts": {
     "test-native": "NATIVE=true jest --config ./jest.native.json --silent",
     "test-web": "jest --config ./jest.web.json --silent",
@@ -22,17 +22,13 @@
     "install-examples": "node ./scripts/installExamples.js",
     "build-examples": "node ./scripts/buildExamples.js",
     "build": "rollup --config",
+    "build_watch": "rollup -w --config",
     "build-toc": "node ./scripts/buildToc.js",
     "semantic-release": "semantic-release",
     "contributors": "all-contributors generate"
   },
-  "publishConfig": {
-    "registry": "https://registry.npm.alibaba-inc.com"
-  },
   "husky": {
-    "hooks": {
-      
-    }
+    "hooks": {}
   },
   "author": {
     "name": "Miklos Bertalan",
@@ -66,6 +62,7 @@
     "react": "*"
   },
   "devDependencies": {
+    "@babel/compat-data": "^7.11.0",
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-export-default-from": "^7.8.3",

@@ -77,41 +77,41 @@ const allBuilds = [
       sourcemap: true,
     },
   },
-  {
-    input: path.resolve('src/index.js'),
-    external: ['./react-platform.cjs'],
-    plugins: [
-      replacePlugin({ 'react-platform': './react-platform.cjs' }),
-      resolvePlugin(),
-      babelPlugin({ exclude: 'node_modules/**' }),
-      externalsPlugin({ dependencies: true, peerDependecies: true }),
-    ],
-    output: {
-      format: 'cjs',
-      dir: 'dist',
-      entryFileNames: 'cjs.es6.js',
-      sourcemap: true,
-    },
-  },
-  {
-    input: path.resolve('src/index.js'),
-    external: ['./react-platform.cjs'],
-    plugins: [
-      replacePlugin({ 'react-platform': './react-platform.cjs' }),
-      resolvePlugin(),
-      babelPlugin({
-        exclude: 'node_modules/**',
-        presets: ['@babel/preset-env'],
-      }),
-      externalsPlugin({ dependencies: true, peerDependecies: true }),
-    ],
-    output: {
-      format: 'cjs',
-      dir: 'dist',
-      entryFileNames: 'cjs.es5.js',
-      sourcemap: true,
-    },
-  },
+  // {
+  //   input: path.resolve('src/index.js'),
+  //   external: ['./react-platform.cjs'],
+  //   plugins: [
+  //     replacePlugin({ 'react-platform': './react-platform.cjs' }),
+  //     resolvePlugin(),
+  //     babelPlugin({ exclude: 'node_modules/**' }),
+  //     externalsPlugin({ dependencies: true, peerDependecies: true }),
+  //   ],
+  //   output: {
+  //     format: 'cjs',
+  //     dir: 'dist',
+  //     entryFileNames: 'cjs.es6.js',
+  //     sourcemap: true,
+  //   },
+  // },
+  // {
+  //   input: path.resolve('src/index.js'),
+  //   external: ['./react-platform.cjs'],
+  //   plugins: [
+  //     replacePlugin({ 'react-platform': './react-platform.cjs' }),
+  //     resolvePlugin(),
+  //     babelPlugin({
+  //       exclude: 'node_modules/**',
+  //       presets: ['@babel/preset-env'],
+  //     }),
+  //     externalsPlugin({ dependencies: true, peerDependecies: true }),
+  //   ],
+  //   output: {
+  //     format: 'cjs',
+  //     dir: 'dist',
+  //     entryFileNames: 'cjs.es5.js',
+  //     sourcemap: true,
+  //   },
+  // },
 ];
 console.log({
   defaultBuild,
