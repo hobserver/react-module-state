@@ -1,6 +1,6 @@
 {
   "name": "react-module-state",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "React state management with a minimal API. Made with ES6 Proxies.",
   "main": "dist/cjs.es6.js",
   "module": "dist/es.es6.js",
@@ -31,8 +31,8 @@
     "hooks": {}
   },
   "author": {
-    "name": "Miklos Bertalan",
-    "email": "miklos.bertalan@risingstack.com"
+    "name": "rongpingli",
+    "email": "985867294@qq.com"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,6 @@
 import React from 'react';
-import {view, store} from '@ali/react-easy-state';
+import { view } from './view';
+import { store } from './store';
 const _ = require('lodash');
 const EasyContext = React.createContext({});
 const Provider = EasyContext.Provider;
